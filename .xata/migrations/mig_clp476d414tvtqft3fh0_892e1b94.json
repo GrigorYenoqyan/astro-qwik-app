@@ -1,0 +1,18 @@
+{
+  "id": "mig_clp476d414tvtqft3fh0",
+  "parentID": "mig_clp471db540ivdbjdut0",
+  "checksum": "1:892e1b94bc26380deba1ece73bf839d2d6583e2b15e20c92efe7fee80d45281b",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "content",
+          "type": "text",
+          "notNull": true,
+          "defaultValue": "Post content"
+        },
+        "table": "posts"
+      }
+    }
+  ]
+}

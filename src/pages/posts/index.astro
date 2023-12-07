@@ -1,0 +1,30 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Card from '../../components/Card.astro';
+import { getXataClient } from '../../xata/client';
+
+const client = getXataClient();
+const posts = await client.db.posts.getAll()
+const a = await fetch(`${Astro.url}/api/posts`);
+console.dir(a);
+---
+
+<Layout title="Posts">
+	<ul role="list" class="link-card-grid">
+		{posts.map(({ id, title, content }) => (
+			<Card
+				href={`/posts/${id}`}
+				title={title}
+				body={content}
+			/>
+		))}
+	</ul>
+</Layout>
+
+<style>
+	.link-card-grid {
+		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		gap: 2rem;
+		padding: 0;
+	}
+</style>

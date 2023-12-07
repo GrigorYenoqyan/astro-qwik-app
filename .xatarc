@@ -1,0 +1,6 @@
+{
+  "databaseURL": "https://Grigor-Yenoqyan-s-workspace-lduu7e.us-east-1.xata.sh/db/astro-qwik-app",
+  "codegen": {
+    "output": "src/xata/index.ts"
+  }
+}
